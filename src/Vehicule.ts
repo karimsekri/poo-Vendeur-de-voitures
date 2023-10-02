@@ -7,7 +7,8 @@ export abstract class Vehicule {
     public couleur: string;
     public kilometrage: number;   
     public prix: number;   
-    public annee: number;   
+    public annee: number; 
+    public static NBRE_VEHICULE_CREE: number = 0  
 
      
     constructor(marque: string, modele: string, immatriculation: string, couleur: string, kilometrage: number, prix: number, annee: number) {
@@ -18,6 +19,7 @@ export abstract class Vehicule {
         this.kilometrage = kilometrage;
         this.prix = prix;
         this.annee = annee;
+        Vehicule.NBRE_VEHICULE_CREE++;
         
     }
 }

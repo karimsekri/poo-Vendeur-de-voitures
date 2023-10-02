@@ -69,4 +69,14 @@ export class Garage {
         }
         
     }
+
+    //Ajouter une fonctionnalité pour calculer la valeur totale de tous 
+    //les véhicules actuellement dans le garage, en additionnant les prix de chaque véhicule
+    getVehiculePrixTotal(): number {
+        let total: number = 0;
+        this.vehicules.forEach(maVoiture => {
+            total += maVoiture.prix;
+        });
+        return total
+    }
 }
